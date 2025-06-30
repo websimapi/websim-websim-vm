@@ -1,0 +1,2 @@
+description: "Create a tiny bootable linux iso file (about 1-2 MB). It should boot to a simple command line interface. Include a text file named 'welcome.txt' on the root of the filesystem with the content 'Welcome to WebSim VM!'. Use the buildroot or a similar tool concept to generate this. The kernel should be minimal."
+

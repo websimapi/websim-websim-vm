@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSim VM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>WebSim VM</h1>
+    <div id="app-container">
+        <div id="main-content">
+            <div id="local-vm-container">
+                <h2>My VM</h2>
+                <div id="vm-controls">
+                    <input type="file" id="iso-input" accept=".iso,.img">
+                    <button id="start-vm-button">Start VM</button>
+                    <button id="stop-vm-button" style="display: none;">Stop VM</button>
+                    <button id="go-live-button" disabled>Go Live</button>
+                    <label style="display: none;" id="remote-input-label">
+                        <input type="checkbox" id="remote-input-toggle"> Allow Remote Input
+                    </label>
+                </div>
+                 <div id="vm-wrapper">
+                    <div id="screen-container"></div>
+                    <textarea id="serial-container" readonly></textarea>
+                </div>
+            </div>
+
+            <div id="remote-view-container">
+                <h2>Viewing: <span id="viewing-username">Nobody</span></h2>
+                <p id="remote-input-status" style="display: none;">Remote input is enabled.</p>
+                <div id="stream-wrapper">
+                     <img id="stream-view" src="placeholder.png" alt="Live stream will appear here">
+                </div>
+            </div>
+        </div>
+        <div id="sidebar">
+            <div id="user-list-container">
+                <h3>Live Sessions</h3>
+                <ul id="live-user-list">
+                    <li>No one is live.</li>
+                </ul>
+            </div>
+            <div id="own-info-container">
+                <h3>My Info</h3>
+                <p><strong>Username:</strong> <span id="my-username"></span></p>
+                <p><strong>Status:</strong> <span id="my-status">Offline</span></p>
+                <img id="my-avatar" src="" alt="My Avatar" class="avatar">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/copy/v86/build/libv86.js"></script>
+    <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
